@@ -28,11 +28,13 @@ class YoutubeDownloader(val videoUrl: String) extends VideoDownloader with Video
   }
 
   private[this] def isYoutubeUrl(videoUrl: String): Boolean = {
-    Option(videoUrl).exists(url => url.contains("youtube.com"))
+//    Option(videoUrl).exists(url => url.contains("youtube.com"))
+    videoUrl.contains("youtube.com")
   }
 
   private[this] def validVideoUrl(videoUrl: String): Boolean = {
-    Option(videoUrl).exists(_.trim.nonEmpty)
+//    Option(videoUrl).exists(_.trim.nonEmpty)
+    videoUrl.trim.nonEmpty
   }
 }
 

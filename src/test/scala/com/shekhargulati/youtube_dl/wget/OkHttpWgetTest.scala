@@ -20,7 +20,7 @@ class OkHttpWgetTest extends FunSpec with Matchers {
 
   describe("OkHttpWget") {
     it("should make GET request and print response to console") {
-      val output = OkHttpWget().get(url)
+      val output: Option[Unit] = OkHttpWget().get(url)
     }
 
     it("should download file") {
